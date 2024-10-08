@@ -3,17 +3,17 @@
 return [
     /*
     |--------------------------------------------------------------------------
-    | Password Reset Language Lines
+    | Linie językowe resetowania hasła
     |--------------------------------------------------------------------------
     |
-    | The following language lines are the default lines which match reasons
-    | that are given by the password broker for a password update attempt
-    | has failed, such as for an invalid token or invalid new password.
+    | Poniższe linie językowe to domyślne linie, które odpowiadają powodom,
+    | dla których próba aktualizacji hasła nie powiodła się, takie jak
+    | nieprawidłowy token lub nieprawidłowe nowe hasło.
     |
     */
-    'password' => 'Passwords must be at least six characters and match the confirmation.',
-    'reset' => 'Your password has been reset!',
-    'sent' => 'We have e-mailed your password reset link!',
-    'token' => 'This password reset token is invalid.',
-    'user' => "We can't find a user with that e-mail address.",
+    'password' => 'Hasła muszą mieć co najmniej sześć znaków i odpowiadać potwierdzeniu.',
+    'reset' => 'Twoje hasło zostało zresetowane!',
+    'sent' => 'Wysłaliśmy link do resetowania hasła na Twój adres e-mail!',
+    'token' => 'Ten token resetowania hasła jest nieprawidłowy.',
+    'user' => "Nie możemy znaleźć użytkownika z tym adresem e-mail.",
 ];

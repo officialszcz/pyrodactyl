@@ -319,7 +319,7 @@ const SoftwareContainer = () => {
                             <div className='flex items-center gap-2'>
                                 <HugeIconsEggs fill='currentColor' />
                                 <div className='flex flex-col'>
-                                    <h1 className='text-2xl'>Current Egg</h1>
+                                    <h1 className='text-2xl'>Obecne Jajko</h1>
                                     {currentEggName &&
                                         (currentEggName?.includes(blank_egg_prefix) ? (
                                             <p className='text-neutral-300 text-sm'>Please select a egg</p>

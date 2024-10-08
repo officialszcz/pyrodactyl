@@ -18,7 +18,7 @@ interface Values {
 
 const schema = Yup.object().shape({
     email: Yup.string().email().required(),
-    password: Yup.string().required('You must provide your current account password.'),
+    password: Yup.string().required('Należy podać aktualne hasło do konta.'),
 });
 
 export default () => {
@@ -64,7 +64,7 @@ export default () => {
                                 id={'confirm_password'}
                                 type={'password'}
                                 name={'password'}
-                                label={'Confirm Password'}
+                                label={'Potwierdź hasło'}
                             />
                         </div>
                         <div className={`mt-6`}>

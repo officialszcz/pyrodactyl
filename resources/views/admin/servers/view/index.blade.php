@@ -42,7 +42,7 @@
                                 <td><code>{{ $server->uuid }}</code></td>
                             </tr>
                             <tr>
-                                <td>Current Egg</td>
+                                <td>Obecne Jajko</td>
                                 <td>
                                     <a href="{{ route('admin.nests.view', $server->nest_id) }}">{{ $server->nest->name }}</a> ::
                                     <a href="{{ route('admin.nests.egg.view', $server->egg_id) }}">{{ $server->egg->name }}</a>

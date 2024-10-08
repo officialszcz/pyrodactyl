@@ -2,25 +2,25 @@
 
 return [
     'notices' => [
-        'created' => 'A new nest, :name, has been successfully created.',
-        'deleted' => 'Successfully deleted the requested nest from the Panel.',
-        'updated' => 'Successfully updated the nest configuration options.',
+        'created' => 'Nowe gniazdo, :name, zostało pomyślnie utworzone.',
+        'deleted' => 'Pomyślnie usunięto żądane gniazdo z Panelu.',
+        'updated' => 'Pomyślnie zaktualizowano opcje konfiguracyjne gniazda.',
     ],
     'eggs' => [
         'notices' => [
-            'imported' => 'Successfully imported this Egg and its associated variables.',
-            'updated_via_import' => 'This Egg has been updated using the file provided.',
-            'deleted' => 'Successfully deleted the requested egg from the Panel.',
-            'updated' => 'Egg configuration has been updated successfully.',
-            'script_updated' => 'Egg install script has been updated and will run whenever servers are installed.',
-            'egg_created' => 'A new egg was laid successfully. You will need to restart any running daemons to apply this new egg.',
+            'imported' => 'Pomyślnie zaimportowano to Jajo i jego powiązane zmienne.',
+            'updated_via_import' => 'To Jajo zostało zaktualizowane przy użyciu podanego pliku.',
+            'deleted' => 'Pomyślnie usunięto żądane jajo z Panelu.',
+            'updated' => 'Konfiguracja jaja została pomyślnie zaktualizowana.',
+            'script_updated' => 'Skrypt instalacyjny jaja został zaktualizowany i będzie uruchamiany za każdym razem, gdy serwery będą instalowane.',
+            'egg_created' => 'Nowe jajo zostało pomyślnie złożone. Należy ponownie uruchomić wszystkie działające demony, aby zastosować to nowe jajo.',
         ],
     ],
     'variables' => [
         'notices' => [
-            'variable_deleted' => 'The variable ":variable" has been deleted and will no longer be available to servers once rebuilt.',
-            'variable_updated' => 'The variable ":variable" has been updated. You will need to rebuild any servers using this variable in order to apply changes.',
-            'variable_created' => 'New variable has successfully been created and assigned to this egg.',
+            'variable_deleted' => 'Zmienna ":variable" została usunięta i nie będzie już dostępna dla serwerów po odbudowie.',
+            'variable_updated' => 'Zmienna ":variable" została zaktualizowana. Należy odbudować wszystkie serwery używające tej zmiennej, aby zastosować zmiany.',
+            'variable_created' => 'Nowa zmienna została pomyślnie utworzona i przypisana do tego jaja.',
         ],
     ],
 ];

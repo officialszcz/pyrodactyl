@@ -19,11 +19,11 @@ interface Values {
 }
 
 const schema = Yup.object().shape({
-    current: Yup.string().min(1).required('You must provide your current account password.'),
+    current: Yup.string().min(1).required('Należy podać aktualne hasło do konta.'),
     password: Yup.string().min(8).required(),
     confirmPassword: Yup.string().test(
-        'password',
-        'Password confirmation does not match the password you entered.',
+        'hasło',
+        'Potwierdzenie hasła nie odpowiada wprowadzonemu hasłu.',
         function (value) {
             return value === this.parent.password;
         },
@@ -71,7 +71,7 @@ export default () => {
                                 id={'current_password'}
                                 type={'password'}
                                 name={'current'}
-                                label={'Current Password'}
+                                label={'Bieżące hasło'}
                             />
                             <div className={`mt-6`}>
                                 <Field
@@ -80,7 +80,7 @@ export default () => {
                                     name={'password'}
                                     label={'New Password'}
                                     description={
-                                        'Your new password should be at least 8 characters in length and unique to this website.'
+                                        'Nowe hasło powinno składać się z co najmniej 8 znaków i być unikalne dla tej witryny.'
                                     }
                                 />
                             </div>
@@ -89,7 +89,7 @@ export default () => {
                                     id={'confirm_new_password'}
                                     type={'password'}
                                     name={'confirmPassword'}
-                                    label={'Confirm New Password'}
+                                    label={'Potwierdź nowe hasło'}
                                 />
                             </div>
                             <div className={`mt-6`}>

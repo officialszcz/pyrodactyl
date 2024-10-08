@@ -63,7 +63,7 @@ export default () => {
     }, [error]);
 
     return (
-        <PageContentBlock title={'Dashboard'} showFlashKey={'dashboard'}>
+        <PageContentBlock title={'Panel'} showFlashKey={'dashboard'}>
             <Tabs
                 defaultValue={dashboardDisplayOption}
                 onValueChange={(value) => {
@@ -71,7 +71,7 @@ export default () => {
                 }}
                 className='w-full'
             >
-                <MainPageHeader title={showOnlyAdmin ? 'Other Servers' : 'Your Servers'}>
+                <MainPageHeader title={showOnlyAdmin ? 'Inne Serwery' : 'Twoje Serwery'}>
                     <div className='flex gap-4'>
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>
@@ -114,7 +114,7 @@ export default () => {
                                             setShowOnlyAdmin((s) => !s);
                                         }}
                                     >
-                                        {showOnlyAdmin ? 'Show personal servers' : 'Show other servers'}
+                                        {showOnlyAdmin ? 'Pokaż osobiste serwery' : 'Pokaż inne serwery'}
                                     </DropdownMenuItem>
                                 )}
                             </DropdownMenuContent>
@@ -175,8 +175,8 @@ export default () => {
                                     ) : (
                                         <p className={`text-center text-sm text-zinc-400`}>
                                             {showOnlyAdmin
-                                                ? 'There are no other servers to display.'
-                                                : 'There are no servers associated with your account.'}
+                                                ? 'Nie ma innych serwerów do wyświetlenia.'
+                                                : 'Z twoim kontem użytkownika nie są powiązane żadne serwery.'}
                                         </p>
                                     )
                                 }
@@ -207,8 +207,8 @@ export default () => {
                                         ) : (
                                             <p className={`text-center text-sm text-zinc-400`}>
                                                 {showOnlyAdmin
-                                                    ? 'There are no other servers to display.'
-                                                    : 'There are no servers associated with your account.'}
+                                                    ? 'Nie ma innych serwerów do wyświetlenia.'
+                                                    : 'Z twoim kontem użytkownika nie są powiązane żadne serwery.'}
                                             </p>
                                         )
                                     }

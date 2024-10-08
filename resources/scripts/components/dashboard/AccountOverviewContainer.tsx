@@ -1,5 +1,7 @@
 import { useLocation } from 'react-router-dom';
 
+
+
 import MessageBox from '@/components/MessageBox';
 import ConfigureTwoFactorForm from '@/components/dashboard/forms/ConfigureTwoFactorForm';
 import UpdateEmailAddressForm from '@/components/dashboard/forms/UpdateEmailAddressForm';
@@ -7,37 +9,42 @@ import UpdatePasswordForm from '@/components/dashboard/forms/UpdatePasswordForm'
 import ContentBox from '@/components/elements/ContentBox';
 import PageContentBlock from '@/components/elements/PageContentBlock';
 
+
+
 import Code from '../elements/Code';
+import { useRef } from "react";
+
 
 export default () => {
     const { state } = useLocation();
+    const pRef = useRef<HTMLParagraphElement | null>(null);
 
     return (
         <PageContentBlock title={'Your Settings'}>
-            <h1 className='text-[52px] font-extrabold leading-[98%] tracking-[-0.14rem] mb-8'>Your Settings</h1>
+            <h1 className='text-[52px] font-extrabold leading-[98%] tracking-[-0.14rem] mb-8'>Twoje Ustawienia</h1>
             {state?.twoFactorRedirect && (
                 <MessageBox title={'2-Factor Required'} type={'error'}>
-                    Your account must have two-factor authentication enabled in order to continue.
+                    Aby kontynuować, konto musi mieć włączone uwierzytelnianie dwuskładnikowe.
                 </MessageBox>
             )}
 
             <div className='flex flex-col w-full h-full gap-4'>
-                <h2 className='mt-8 font-extrabold text-2xl'>Account Information</h2>
-                <ContentBox title={'Email Address'} showFlashes={'account:email'}>
+                <h2 className='mt-8 font-extrabold text-2xl'>Informacje o koncie</h2>
+                <ContentBox title={'Adres Email'} showFlashes={'account:email'}>
                     <UpdateEmailAddressForm />
                 </ContentBox>
-                <h2 className='mt-8 font-extrabold text-2xl'>Password and Authentication</h2>
-                <ContentBox title={'Account Password'} showFlashes={'account:password'}>
+                <h2 className='mt-8 font-extrabold text-2xl'>Hasło i uwierzytelnianie</h2>
+                <ContentBox title={'Hasło do konta'} showFlashes={'account:password'}>
                     <UpdatePasswordForm />
                 </ContentBox>
-                <ContentBox title={'Multi-Factor Authentication'}>
+                <ContentBox title={'Uwierzytelnianie wieloskładnikowe'}>
                     <ConfigureTwoFactorForm />
                 </ContentBox>
-                <h2 className='mt-8 font-extrabold text-2xl'>App</h2>
-                <ContentBox title={'Panel Version'}>
+                <h2 className='mt-8 font-extrabold text-2xl'>Aplikacja</h2>
+                <ContentBox title={'Wersja Panelu'}>
                     <p className='text-sm mb-4'>
-                        This is useful to provide Pyro staff if you run into an unexpected issue.
-                    </p>
+                        Jest to przydatne, aby zapewnić kapibarze, jeśli napotkasz nieoczekiwany problem.</p>
+                    <p className='text-sm mb-5' ref={pRef}>Jebać Dawida, kochać Kapibare</p>
                     <div className='flex flex-col gap-4'>
                         <Code>{import.meta.env.VITE_PYRODACTYL_VERSION}</Code>
                         <Code>
