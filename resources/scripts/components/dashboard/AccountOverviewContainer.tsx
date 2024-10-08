@@ -44,7 +44,7 @@ export default () => {
                 <ContentBox title={'Wersja Panelu'}>
                     <p className='text-sm mb-4'>
                         Jest to przydatne, aby zapewnić kapibarze, jeśli napotkasz nieoczekiwany problem.</p>
-                    <p className='text-sm mb-5' ref={pRef}>Jebać Dawida, kochać Kapibare</p>
+                    <p className='text-sm mb-5' ref={pRef}>Jebać Dawida Harabina, kochać Kapibare</p>
                     <div className='flex flex-col gap-4'>
                         <Code>{import.meta.env.VITE_PYRODACTYL_VERSION}</Code>
                         <Code>
